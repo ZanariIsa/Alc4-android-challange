@@ -1,0 +1,105 @@
+<ion-header>
+    <ion-toolbar>
+          <ion-title class="hi" >Mileages and Fuel</ion-title>
+       
+    </ion-toolbar>
+  
+    <ion-buttons>
+            <ion-back-button
+            [text]="buttonText"
+            [icon]="buttonIcon"
+            (click)=back
+            >
+            
+        </ion-back-button>
+      </ion-buttons>
+  
+  </ion-header>
+  
+  <ion-content>
+           <div [ngSwitch]="orders"  >
+  
+                   <div *ngSwitchCase="'mileage'" style="text-align: center "> 
+  
+  
+  
+                <div class="spacer" style="height: 5px"></div> 
+  
+               <div  no-line text-center >
+                      MILEAGES&nbsp;&nbsp;
+                   <ion-icon (click)="edit()" style="font-size: 30px" ios="ios-search" md="md-search" item-left  > </ion-icon> 
+            </div>
+  
+            <div *ngIf="pointerVisible" id="vehicle">
+                  <div style="border-style:outset;margin-left: 5px;margin-right: 5px ">
+                         <div class="spacer" style="height: 10px"></div> 
+                         <div text-center >
+                              <span style="font-size: 18px;border-style:none"> {{initreg}} 
+                                  </span>&nbsp;&nbsp;&nbsp;
+                                  <ion-icon ios="ios-search" md="md-search" item-left (click)="openPicker()"  ></ion-icon> 
+                          
+                          </div>
+  
+           <div class="spacer" style="height: 15px"></div> 
+           <div  text-wrap  text-center>
+                  Start Date: 
+                  <span style="font-size: 18px;border-style:outset"> {{initDate | date}} 
+                      </span>&nbsp;
+                      <ion-icon ios="ios-search" md="md-search" item-left  ></ion-icon> 
+  
+                      <div class="spacer" style="height: 15px"></div> 
+  
+                      End Date: 
+                      <span style="font-size: 18px;border-style:outset"> {{initDateL | date}} 
+                          </span>&nbsp;
+                          <ion-icon ios="ios-search" md="md-search" item-left  ></ion-icon> 
+              </div>
+  
+              <div class="spacer" style="height: 10px"></div> 
+  
+              <div  text-center  >  
+                      <ion-icon ios="ios-checkbox" md="md-checkbox" (click)="proceed()" style="font-size: 30px;margin-top: 10px"></ion-icon>             
+                  </div>
+  
+  
+                      </div>
+                  </div>
+  
+                   <ion-list > 
+                          <ion-item no-lines *ngFor="let names of ThisMessage" style="text-align:center;">
+                                  {{names}} 
+                                  </ion-item>  
+                                  <ion-button   expand="block" *ngFor="let item of items" (click)="itemTapped($event, item)"  >
+                                          <div class="item item-thumbnail-left" style="border-top-style: outset;border-left-style: outset">
+  
+  
+  
+                                      <ion-button   slot="end" >
+                                              {{item.title}}
+                                              <ion-badge  style="background-color:rgba(168, 76, 60, 0.897); float: right;margin-top:3px ">
+                                                  {{item.note}} </ion-badge>  
+                                              </ion-button>
+                                              
+                                              
+                                              </div>
+                                              <ion-progress-bar [value]="item.Dist" [value]="item.Kms"  ></ion-progress-bar> 
+                                      </ion-button>
+  
+                                
+                                 
+  
+  
+  
+  
+                      </ion-list>    
+                        
+                      
+                      </div> 
+  
+  
+  
+                      </div>
+     
+    
+  </ion-content>
+  

@@ -1,0 +1,7 @@
+{
+  "name": "smartlogisticsapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,71 @@
+<ion-header>
+    <ion-toolbar>
+   
+      <ion-title class="hi" >Schedule</ion-title>
+   
+    </ion-toolbar>
+    
+    <ion-buttons>
+        <ion-back-button
+        [text]="buttonText"
+        [icon]="buttonIcon"
+        (click)=back
+        >
+        
+    </ion-back-button>
+  </ion-buttons>
+  </ion-header>
+  
+  <ion-content  >
+    <!-- *ngIf="pointerVisible"  -->
+          <div padding text-center  >
+           <ion-row justify-content-center align-items-center style="height: 80%">
+                  <p align="center"><img class="logo" src="assets/smart_smal.png"  /></p>
+              </ion-row>
+              
+              <div class="spacer" style="height: 2px"></div>  
+              <p align="center">NO SCHEDULE SET YET</p>
+              <ion-button  color="success" (click)="addnew()"  shape="round" >
+            <ion-icon ios="ios-add-circle" md="md-add-circle"  (click)="addnew()"></ion-icon>
+              </ion-button>
+          </div>
+          <!-- *ngIf="pointerVisible2" 
+           -->
+          <div text-center >
+                  <ion-button color="success"  shape="round" >
+                    SCHEDULES
+                  </ion-button>&nbsp;
+                  <ion-button color="success"  (click)="addnew()" shape="round" >
+                    <ion-icon ios="ios-add-circle" md="md-add-circle"  (click)="addnew()"></ion-icon>
+                  </ion-button>&nbsp;
+  
+  
+  
+              </div>
+  
+              <div class="spacer" style="height: 10px"></div>
+              
+              
+               <div  text-wrap  text-center>
+                <ion-list inset  >
+                   <ion-item-sliding  *ngFor="let item of items"  > 
+                    <ion-item >  
+                      <p>{{item.title}} </p>
+                      <p> {{item.note}} </p>
+                    </ion-item>   
+                   
+                 
+                  </ion-item-sliding>  
+                  <ion-item-options side="end" (ionSwipe)="view(item)">
+                      <ion-button color="success"   (click)="view(item)" shape="round" >
+                          <ion-icon name="search" ></ion-icon>
+                          View Linked
+                        </ion-button>&nbsp;
+                    </ion-item-options>
+    
+                  
+                </ion-list>             
+                </div>
+            
+  </ion-content>
+  

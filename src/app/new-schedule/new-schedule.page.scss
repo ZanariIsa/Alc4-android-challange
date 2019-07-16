@@ -1,0 +1,25 @@
+.img{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    height: 270px;
+    width: 95%;       
+    display: block;   
+    transform: translate(-50%, -50%); 
+    overflow: hidden;
+    border-style:solid;       
+    box-shadow: 0 16px 20px rgba(0,0,0,.4);
+    border-radius:5px;         
+    }
+
+    .dropbox {
+        -webkit-flex: none!important; 
+        flex: none!important; 
+        margin-bottom: 0px;
+    }
+    .hi{
+        color: black;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+      }

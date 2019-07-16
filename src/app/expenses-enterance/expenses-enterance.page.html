@@ -1,0 +1,91 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button
+            [text]="buttonText"
+            [icon]="buttonIcon"
+            (click)=back
+            >
+            
+        </ion-back-button>
+      </ion-buttons>
+
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <ion-list>
+          <div text-center >
+              <ion-button color="medium" expand="block" >
+                  EXPENSES ENTRY
+              </ion-button>
+          </div>
+          <div class="spacer" style="height: 10px"></div> 
+  
+           <div text-center > 
+             
+              <span style="font-size: 18px;border-style:none" (click)="openPicker()" > {{initreg}} 
+                </span>&nbsp;
+                <ion-icon ios="ios-search" md="md-search" item-left   ></ion-icon> 
+          
+          </div> 
+  
+          <div class="spacer" style="height: 10px"></div> 
+  
+  
+          <ion-item>
+              Entry Date:   <ion-datetime display-format="DD-MM-YYYY "> 
+  
+              <span style="font-size: 18px;border-style:ridge"> {{initDate | date}} 
+                  </span>&nbsp;
+                  <ion-icon ios="ios-search" md="md-search" item-left  ></ion-icon>
+                </ion-datetime>
+          </ion-item>
+       
+          <div class="spacer" style="height: 15px"></div> 
+  
+  
+          <ion-item>
+            
+              <ion-select multiple="true" cancelText="Nah" okText="Ok!"  [(ngModel)]="usage.type"  placeholder="TYPE"   >
+                <ion-select-option value="Mileage">Mileage</ion-select-option>
+                <ion-select-option value="Salary">Drv salary</ion-select-option>
+                <ion-select-option  value="Mgt">Mgt Fee</ion-select-option>
+                <ion-select-option value="Insurance">Insurance</ion-select-option>
+                <ion-select-option value="Ncc">NCC Licence</ion-select-option>
+                <ion-select-option value="Ruiru cc">Ruiru Licence</ion-select-option>
+                <ion-select-option value="Ngong cc">Ngong Licence</ion-select-option>
+                <ion-select-option value="Mechanical">Mechanical</ion-select-option>
+                <ion-select-option value="Tyre" >New Tyre</ion-select-option>
+                <ion-select-option value="Cops">Cops</ion-select-option>
+                <ion-select-option value="Body" >Body work</ion-select-option>
+                <ion-select-option value="NTSA">NTSA Inspection</ion-select-option>
+                <ion-select-option value="Accident" >Accident</ion-select-option>
+                <ion-select-option value="Others" >Others</ion-select-option>
+              </ion-select>
+            </ion-item>
+  
+  
+            <ion-item>
+                <ion-label color="primary" stacked>Amount</ion-label>
+                <ion-input type="number" placeholder="Enter Amount" [(ngModel)]="usage.amo" ></ion-input>
+              </ion-item>
+                
+              <ion-item>
+                  <ion-label color="primary" stacked>Description</ion-label>
+                  <ion-input type="text"  placeholder="Describe the activity" [(ngModel)]="usage.des"></ion-input>
+              </ion-item> 
+      
+              <div text-wrap  text-center >
+                 <ion-button color="medium" (click)="proceed()" >
+                    POST NEW EXPENSE
+                  </ion-button>
+                  <ion-item no-lines *ngFor="let names of ThisMessage" style="text-align:center;color:red">
+                      {{names}} 
+                   </ion-item>    
+              </div>
+  
+    
+      </ion-list>
+  </ion-content>
+  

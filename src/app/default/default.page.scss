@@ -1,0 +1,29 @@
+img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    width: auto;       
+    display: block;   
+    transform: translate(-50%, -50%);   
+    background: black; 
+  }
+  
+  .masters {
+    background-color: black;
+  }
+
+  .home-container .row-center img {
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    top:50%;
+    transform:translateY(-50%);
+}
+ion-header ion-toolbar::shadow {
+    --background: rgb(179, 209, 255);
+  }
+  ion-content{
+    --ion-background-color:black;
+  }

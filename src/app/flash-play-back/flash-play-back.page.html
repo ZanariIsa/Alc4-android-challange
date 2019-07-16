@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>FlashPlayBack</ion-title>
+       <ion-back-button end defaultHref="currdash"  ></ion-back-button>
+  
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <div text-wrap  text-center >
+          <div class="spacer" style="height: 7px"></div>
+          <ion-item no-lines *ngFor="let names of ThisMessage" style="text-align:center;color:red">
+              {{names}} 
+          </ion-item>
+          <div class="spacer" style="height: 7px"></div>       
+          <ion-button color="medium"  (click)="onehours()" >
+              LAST 1 HOURS
+          </ion-button>  
+          <div class="spacer" style="height: 5px"></div> 
+          <ion-button color="medium"  (click)="twohours()" >
+              LAST 2 HOURS
+          </ion-button>  
+          <div class="spacer" style="height: 5px"></div>  
+          <ion-button color="medium"  (click)="sixhours()"  >
+              LAST 6 HOURS
+          </ion-button>  
+          <div class="spacer" style="height: 5px"></div>  
+          <ion-button color="medium"   (click)="twelvehours()"  >
+              LAST 12 HOURS
+          </ion-button>  
+  
+  
+      </div>
+      <div class="spacer" style="height: 10px"></div>
+      <ion-icon name="close-circle" (click)="dismissthis()" style="font-size: 30px;padding-right:30px"></ion-icon>
+  
+  
+      <div #map id="map"></div>
+  
+  
+  
+  </ion-content>
+  

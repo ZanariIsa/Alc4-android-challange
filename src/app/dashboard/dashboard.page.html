@@ -1,0 +1,97 @@
+<ion-header >
+    <ion-toolbar  >
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+
+      <ion-title class="hi">Smart Logistics</ion-title>
+
+      <ion-img slot="end" style="width: 50px;height:50px" src="assets/caption.png"></ion-img>
+    </ion-toolbar>
+  </ion-header>
+  
+
+
+<ion-content padding class="menu-content myBg" class="bg">
+    <div>
+      <ion-grid>
+
+          <ion-row>
+
+         <ion-col col-md-4>
+           
+         <ion-card class="fixed" (click)=" navigate()" style="background-color:rgb(170, 194, 238)" >
+          
+            <img src="assets/1845090 (2).png" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+           <h2 style="margin-top: 15px"class="h">Live Tracking</h2> 
+       </ion-card>
+      
+       </ion-col>
+
+            <ion-col col-md-4>
+              
+              <ion-card   class="fixed" (click)="Dispatch()"  style="background-color:rgb(170, 194, 238)" >
+             
+              <img src="assets/1712225.png" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+             
+              <h1 style="margin-top: 15px" class="h" >Dispatch</h1> 
+                </ion-card>
+            </ion-col>
+          </ion-row>
+
+
+        </ion-grid>
+
+        <ion-grid>
+            <ion-row>
+           <ion-col col-md-1>
+           
+           <ion-card class="fixed" (click)="fuel()"  style="background-color:rgb(170, 194, 238)" >
+            <img src="assets/gasoline (1).svg" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+             
+            <h1  style="margin-top: 15px"class="h" >Fuel</h1> 
+           
+         </ion-card>
+         </ion-col>
+        
+              <ion-col col-md-1>
+              
+                <ion-card class="fixed" (click)=" OtherExpense()"   style="background-color:rgb(170, 194, 238)" >
+                 
+                  <img src="assets/1509658.png" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+            
+                  <h1 style="margin-top: 15px" class="h">Other Expenses</h1> 
+                 
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    
+          <ion-grid>
+            <ion-row>
+           <ion-col col-md-2>
+           
+           <ion-card   class="fixed" (click)=" sch()"  style="background-color:rgb(170, 194, 238)  " >
+         
+            <img src="assets/939354.png" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+            
+            <h1 style="margin-top: 15px" class="h" >Vehicle Performance</h1> 
+         </ion-card>
+         </ion-col>
+              <ion-col col-md-2>
+              
+                <ion-card class="fixed" (click)="cash()"  style="background-color:rgb(170, 194, 238)"  >
+                  <img src="assets/appointment.svg" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+            
+                  <h1  style="margin-top: 15px"class="h" >Cash Flow</h1> 
+                
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    
+        </div>
+
+
+  </ion-content>
+  

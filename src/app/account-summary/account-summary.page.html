@@ -1,0 +1,93 @@
+<ion-header>
+    <ion-toolbar>
+    
+ 
+        <ion-buttons slot="start">
+            <ion-back-button
+                [text]="buttonText"
+                [icon]="buttonIcon"
+               (click)="back"
+                >
+                
+            </ion-back-button>
+        </ion-buttons>
+
+      <ion-title class="hi"  >Finance Dashboard</ion-title>
+     
+   
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content  >
+      <ion-button color="primary" expand="block" >
+          MONTHLY PNL SUMMARY 
+      </ion-button>
+  
+      <div  padding text-center  >
+          <ion-row justify-content-center align-items-center style="height: 80%">
+          <p align="center"><img class="logo" src="assets/smart_smal.png"  /></p>
+          </ion-row>
+          <div class="spacer" style="height: 2px"></div>                     
+          <p align="center">No finance data yet</p>
+      </div> 
+      <div  text-wrap   text-center style="margin-top: 2px" > 
+            
+      
+          <div text-wrap  text-center style="margin-top:10px"   > 
+              <h2 align="center">  
+                      <span style="font-size: 18px;border-style:ridge" (click)="openPicker()"   >  {{initreg}} 
+                          </span> 
+                  
+  
+                      <ion-icon ios="ios-search" md="md-search" item-left   ></ion-icon> 
+                
+                      
+              </h2>
+  
+              <ion-button style="margin-top:20px" >
+                  <ion-label  *ngFor="let names of ThisMessage3"  >
+                      {{names}} 
+                  
+                  </ion-label>
+  
+              </ion-button>
+  
+  
+  
+            </div> 
+  
+  
+            <div  class="action-sheets-basic-page" > 
+  
+                <div style="width:90%;text-align:center;margin-top:10px">
+                    <ion-item no-lines *ngFor="let names of ThisMessage2" style="text-align:center" >
+                        <ion-label>  {{names}}   </ion-label>
+                        <ion-toggle [(ngModel)]="ps_only" (ionChange)="onChange()"></ion-toggle>          
+                    </ion-item>   
+  
+  
+                  </div> 
+  
+  
+          <ion-list  >                
+              <ion-item *ngFor="let item of items" (click)="itemTapped($event, item)"  >
+                  <h2>
+                  {{item.title}} 
+                  </h2>        
+                  PNL:  Ksh.  {{item.note}}    
+                          
+                  </ion-item>
+              </ion-list>
+  
+  
+  
+  
+              </div> 
+  
+  
+  
+  
+  
+            </div> 
+  </ion-content>
+  

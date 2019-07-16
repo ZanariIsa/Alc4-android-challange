@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+    
+      <ion-title class="hi" >Alert</ion-title>
+      <ion-back-button end defaultHref="schedule-dashboard"  ></ion-back-button> 
+      
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content  class="img" >
+  
+    <div text-wrap  text-center >
+      <div class="spacer" style="height: 7px"></div>   
+      <!-- *ngFor="let names of ThisMessage"           -->
+            <ion-item *ngFor="let names of ThisMessage"  no-lines style="text-align:center;color:red">
+                {{names}} 
+            </ion-item>
+            <!-- *ngFor="let item of items" -->
+            <ion-item *ngFor="let names of ThisMessage"  no-lines  style="font-size: larger">
+                <b>{{item.title}} </b>  {{item.note}} 
+            </ion-item>
+  
+     
+  
+      <div class="spacer" style="height: 20px"></div>   
+        <ion-icon name="close-circle" (click)="dismissthis()" style="font-size: 30px;padding-right:30px"></ion-icon>
+   </div>
+  
+  </ion-content>
+  

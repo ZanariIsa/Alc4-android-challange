@@ -1,0 +1,87 @@
+<ion-header>
+    <ion-toolbar>
+      
+          <ion-title class="hi" >Vehicle Management</ion-title>
+        
+          <ion-buttons slot="start">
+            <ion-back-button
+                [text]="buttonText"
+                [icon]="buttonIcon"
+                (click)=back
+                >
+                
+            </ion-back-button>
+          </ion-buttons>
+     
+    </ion-toolbar>
+  </ion-header>
+  
+  
+  <ion-content padding class="menu-content myBg" class="bg">
+      <div>
+        <ion-grid>
+  
+            <ion-row>
+  
+           <ion-col col-md-4>
+              <!-- rgb(228,231,237) -->
+              <!-- style="background-color:rgb(165, 182, 209) " -->
+              <!-- rgb(173,216,230) -->
+           <ion-card class="fixed" (click)=" navigateToHome()" style="background-color:rgb(170, 194, 238)" >
+             <!-- <ion-icon name="person" style="align-items: center"></ion-icon>  -->
+             <!-- location (2).svg -->
+             <!-- track-order.png -->
+              <img src="assets/1236506.png" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+             <h2 style="margin-top: 15px"class="h"> Account Summary </h2> 
+         </ion-card>
+        
+         </ion-col>
+  
+              <ion-col col-md-4>
+                
+                <ion-card   class="fixed" (click)=" Fuelv()"  style="background-color:rgb(170, 194, 238)" >
+                <!-- <ion-icon name="color-fill" (click)="Fuel()"></ion-icon> -->
+                <!-- loan.svg -->
+                <img src="assets/expenses.svg" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+               
+                <h1 style="margin-top: 15px" class="h" >Enter Expenses</h1> 
+                  </ion-card>
+              </ion-col>
+            </ion-row>
+  
+  
+          </ion-grid>
+  
+          <ion-grid>
+              <ion-row>
+             <ion-col col-md-1>
+                <!-- style="background-color:rgb(165, 182, 209) "  -->
+             <ion-card class="fixed" (click)="schFuel()"  style="background-color:rgb(170, 194, 238)" >
+              <img src="assets/browser.svg" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+               
+              <h1  style="margin-top: 15px"class="h" >Vehicle Input </h1> 
+             
+           </ion-card>
+           </ion-col>
+           <!-- class="icon" -->
+                <ion-col col-md-1>
+                  
+                  <ion-card class="fixed" (click)="vehFuel()"   style="background-color:rgb(170, 194, 238)" >
+                    <img src="assets/1722801.png" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+              
+                    <h1 style="margin-top: 15px" class="h">View Expenses </h1> 
+                   
+                  </ion-card>
+                </ion-col>
+  
+                
+              </ion-row>
+  
+  
+            </ion-grid>
+      
+          
+          </div>
+  
+    </ion-content>
+    

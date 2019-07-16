@@ -1,0 +1,37 @@
+.hi{
+    color: black;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+  }
+  .action-sheets-basic-page {
+    .ion-md-share {
+        --background: #ED4248;
+
+      color: #ED4248;
+    }
+    .ion-md-arrow-dropright-circle {
+        --background: #508AE4;
+      color: #508AE4;
+    }
+    .ion-md-heart-outline {
+        --background: #31D55F;
+      color: #31D55F;
+    }
+    .action-sheet-cancel ion-icon,
+    .action-sheet-destructive ion-icon {
+        --background: #757575;
+      color: #757575;
+    }
+  }
+  .box{
+    box-shadow: 2px 2px 2px #a0b1c5        
+  }
+
+  .showow{
+    box-shadow: 0px 5px 5px #a0b1c5        
+  }
+
+  .borders{
+    border-radius: 5px
+  }

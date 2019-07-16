@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title class="hi" >Schedule </ion-title>
+    
+      <ion-buttons>
+          <ion-back-button
+          [text]="buttonText"
+          [icon]="buttonIcon"
+          (click)=back
+          >
+          
+      </ion-back-button>
+    </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="spacer" style="height: 10px"></div> 
+      <div text-center >
+         NEW SCHEDULE     
+      </div>
+    
+     <ion-item>
+      <ion-label>SCHEDULE</ion-label>
+      <ion-select  [(ngModel)]="usage.type" placeholder="SCHEDULE">
+        <ion-select-option value="Insurance">Insurance</ion-select-option>
+        <ion-select-option value="Ntsa">Ntsa</ion-select-option>
+        <ion-select-option value="Governor">Governor</ion-select-option>
+        <ion-select-option value="Oil Service">Oil Service</ion-select-option>
+        <ion-select-option value="Wheel Service">Wheel Service</ion-select-option>
+        <ion-select-option value="Ncc">Ncc</ion-select-option>
+        <ion-select-option value="Ruiru cc">Ruiru cc</ion-select-option>
+        <ion-select-option value="Ngong cc">Ngong cc</ion-select-option>
+  
+  
+      </ion-select>
+    </ion-item>
+     
+    <ion-item>
+      <ion-label color="primary" stacked>Description</ion-label>
+      <ion-input type="text"  placeholder="Describe the Schedule" [(ngModel)]="usage.des"></ion-input>
+    </ion-item> 
+  
+   
+    <ion-item>
+      <ion-label color="primary" stacked>Recurring (days)</ion-label>
+      <ion-input type="number" placeholder="Recurring in days" [(ngModel)]="usage.days" ></ion-input>
+    </ion-item>
+      
+    
+    <div text-wrap  text-center >
+      <ion-icon name="close-circle" (click)="dismissthis()" style="font-size: 30px;padding-right:30px"></ion-icon>
+      <ion-icon ios="ios-checkbox" md="md-checkbox" (click)="proceed()" style="font-size: 30px"></ion-icon>           
+  
+     <ion-item no-lines *ngFor="let names of ThisMessage" style="text-align:center;color:red">
+        {{names}} 
+     </ion-item>            
+  </div>
+  
+  
+  
+  
+  </ion-content>
+  

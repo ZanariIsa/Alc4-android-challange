@@ -1,0 +1,105 @@
+<ion-header>
+    <ion-toolbar>
+   
+      <ion-title class="hi" >AccountDetails</ion-title>
+      
+      <ion-buttons slot="start">
+        <ion-back-button
+            [text]="buttonText"
+            [icon]="buttonIcon"
+            (click)=back
+            >
+            
+        </ion-back-button>
+      </ion-buttons>
+
+
+  <ion-segment  [(ngModel)]="orders" >  
+      <ion-segment-button value="Finance" (click)="get_latest_pnl()">
+              FINANCE
+              </ion-segment-button> 
+          </ion-segment>  
+      <!-- <ion-segment [(ngModel)]="orders" color="qx3">
+              <ion-segment-button value="Mileages"  (click)="GET_mileage()">
+                Mileages
+              </ion-segment-button>
+          
+                             
+            </ion-segment> -->
+  
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+         
+  
+      <div [ngSwitch]="orders" class="action-sheets-basic-page" >
+  
+          <div *ngSwitchCase="'Finance'">
+              <div *ngIf="pointerVisible2" padding text-center  >
+                  <ion-row justify-content-center align-items-center style="height: 40%">
+                      <p align="center"><img class="logo" src="assets/smart_smal.png"  /></p>
+                      </ion-row>
+                      <div class="spacer" style="height: 2px"></div>                     
+                      <p align="center">NO FINANCIAL DATA YET</p>
+                      
+                      <ion-button color="success" shape="round" (click)="Addnew_fin()" >
+                        
+                          <ion-icon name="add"  ></ion-icon>
+  
+  
+                      </ion-button>
+  
+  
+                </div> 
+  
+                <ion-list>     
+                    <div text-wrap  text-center style="border-style: outset;margin-left:5px;margin-right:5px;" *ngFor="let item of Msg_date" >                
+                                           
+                        <p align="center">
+                            <ion-button color="success" style="text-align: center;margin-top:20px" shape="round" >
+                                {{item.date}}
+                            </ion-button>
+  
+                            <ion-item no-lines *ngFor="let names of ThisMessage2" style="text-align:center;color:red">
+                                {{names}}                        
+                             </ion-item>   
+      
+                             <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+                                <ion-fab-button (click)="Addnew_fin()" style="margin-top:40px" >
+                                  <ion-icon name="add"></ion-icon>
+                                </ion-fab-button>
+                              </ion-fab>
+                            
+  
+            </div>
+            </ion-list>
+  
+        </div>  
+        
+        <div class="spacer" style="height:50px"></div> 
+  
+          <div text-wrap text-center style="border-style:none"> 
+            <ion-list >
+                <ion-button   *ngFor="let item of items_pnl"  style="height:95px"  >
+                    <div class="item item-thumbnail-left" style="border-top-style: outset;border-left-style: outset"> 
+                        <ion-button color="success"  style="height:55px;margin-top: 18px"  >
+                            <img src = {{item.path}} style="height:30px">
+                            {{item.title}}
+                           <ion-badge  style="background-color:#f6861f; float: right"> Ksh. {{item.bal}} /= </ion-badge>                        
+                       
+                        </ion-button>
+                        <p> {{item.income}} </p> 
+                        <p> {{item.expenses}}  </p>
+  
+                    </div>
+                  
+          
+                       
+                      </ion-button>
+                      </ion-list>       
+                      </div> 
+  
+      </div>
+  </ion-content>
+  

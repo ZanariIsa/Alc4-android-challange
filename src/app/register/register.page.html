@@ -1,0 +1,55 @@
+<ion-content padding class="animated fadeIn login auth-page">
+    <div class="theme-bg"></div>
+    <div class="auth-content">
+  
+      <!-- Logo -->
+      <div padding-horizontal text-center class="animated fadeInDown">
+          <div class="login-logo"> <img src="assets/caption.png" alt="Ionic logo"> </div>
+              
+              <h3 no-margin>
+                  <ion-text color="light" class="fw700">
+                    <ion-text color="secondary">Admin Login</ion-text>
+                  </ion-text>
+                </h3>
+          
+      
+      </div>
+  
+      <!-- Login form -->
+      <ion-card> 
+      
+      <form #loginForm="ngForm" novalidate>
+        <ion-item no-padding class="animated fadeInUp">
+          <ion-label position="floating">
+            <ion-icon name="mail" item-start></ion-icon>
+            Email
+          </ion-label>
+          <ion-input color="secondary" name="username" type="text"></ion-input>
+        </ion-item>
+        
+  
+        <ion-item no-padding class="animated fadeInUp">
+          <ion-label position="floating">
+            <ion-icon name="lock" item-start></ion-icon>
+            Password
+          </ion-label>
+          <ion-input color="secondary" name="password" type="password"></ion-input>
+        </ion-item>
+        
+      </form>
+      </ion-card>
+      
+  
+      <div margin-top>
+        <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="Login()" tappable>
+          <ion-icon name="log-in"></ion-icon>
+          Login
+        </ion-button>
+        
+      </div>
+    </div>
+  
+     
+  
+  
+  </ion-content>

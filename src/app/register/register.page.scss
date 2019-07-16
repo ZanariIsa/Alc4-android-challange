@@ -1,0 +1,20 @@
+:host {
+    ion-content {
+        --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+    }
+  }
+  
+  .paz {
+    position: relative;
+    z-index: 10;
+  }
+  
+  
+  .login-logo img {
+    max-width: 50px;
+  }
+  .login-logo {
+    padding: 10px 0;
+    min-height: 40px;
+  
+  }

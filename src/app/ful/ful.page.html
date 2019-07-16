@@ -1,0 +1,92 @@
+<ion-header>
+    <ion-toolbar>
+      
+        <div text-center >
+          
+      <ion-title>  FUEL REPORTs </ion-title>
+      </div>
+
+      <ion-buttons>
+          <ion-back-button
+          [text]="buttonText"
+          [icon]="buttonIcon"
+          (click)=back
+          >
+          
+      </ion-back-button>
+    </ion-buttons>
+
+    </ion-toolbar>
+  
+  </ion-header>
+  
+  <ion-content>
+      <!-- <div text-center *ngIf="pointerSearch" style="border-style:outset;margin-left: 5px;margin-right: 5px ">     -->
+          <ion-button expand="block" style="height:25px" >
+              FUEL REPORT 
+          </ion-button>
+      <!-- </div> -->
+      <div class="spacer" style="height: 10px"></div> 
+      <div text-center >
+        
+          <span style="font-size: 18px;border-style:none" (click)="openPicker()"  > {{initreg}} 
+            </span>&nbsp;&nbsp;&nbsp;
+            <ion-icon ios="ios-search" md="md-search" item-left  style="font-size: 30px;padding-right:30px" (click)="openPicker()"  ></ion-icon> 
+     
+      </div>
+      
+      <div class="spacer" style="height: 20px"></div> 
+  
+      <div >
+          Start Date: 
+          <ion-datetime display-format="DD-MM-YYYY "> {{initDate | date}} 
+                          <span style="font-size: 18px;border-style:ridge"  >
+                          </span>
+                          <ion-icon ios="ios-search" md="md-search" item-left  ></ion-icon> 
+                        </ion-datetime>
+      <div class="spacer" style="height: 15px"></div> 
+      End Date: 
+      <ion-datetime display-format="DD-MM-YYYY "> {{initDateL | date}}  </ion-datetime>
+                          <span style="font-size: 18px;border-style:ridge"  > 
+                          </span>
+                          <ion-icon ios="ios-search" md="md-search" item-left  ></ion-icon> 
+                      
+      </div>
+      <div class="spacer" style="height:10px"></div> 
+  
+  
+      <ion-icon *ngIf="pointerclosesearch" ios="ios-close-circle" md="md-close-circle" (click)="edit2()" 
+      style="font-size: 30px">
+    </ion-icon>
+  
+    <ion-icon ios="ios-checkbox" md="md-checkbox" (click)="proceed()" style="font-size: 30px;margin-left: 40px"></ion-icon> 
+               
+    <ion-list padding *ngIf="pointerlist">   
+        <div text-wrap text-center style="border-style: outset;margin-left:10px;margin-right:20px;" > 
+            <ion-item no-lines *ngFor="let item of filters" style="text-align:center;">
+                <h2> <b>FUEL REPORT</b>  <br> {{item.vehicles}}</h2> {{item.dates}}  <br> {{item.Amo}}   
+                  <ion-icon (click)="edit()" *ngIf="pointersearchBtn"
+                     style="font-size: 25px;float: right;margin-right: 10px;" ios="ios-search" md="md-search">
+                 </ion-icon>                                                      
+              </ion-item>  
+            </div>
+  
+            <div class="spacer" style="height:10px"></div> 
+  
+            <div text-wrap  style="border-style:none"> 
+                <p align="center">DETAILS</p>
+                <ion-list *ngFor="let item of items" style="border-top-style: outset;border-left-style: outset"   >
+                                      
+                  <div class="item item-thumbnail-left" >                                           
+                        <b>{{item.title}}  </b> &nbsp;&nbsp;  {{item.fuel}} &nbsp;    {{item.amount}}                  
+                                                
+                  </div>
+                    
+                </ion-list>                 
+         </div>  
+  
+         
+  
+      </ion-list>
+  </ion-content>
+  

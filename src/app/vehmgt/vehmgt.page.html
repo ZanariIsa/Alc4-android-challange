@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>vehmgt</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="menu-content myBg" class="bg">
+    <div>
+      <ion-grid>
+
+          <ion-row>
+
+         <ion-col col-md-4>
+           
+         <ion-card class="fixed" (click)="navigateToHome()" style="background-color:rgb(170, 194, 238)" >
+          
+            <img src="assets/location (3).svg" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+           <h2 style="margin-top: 15px"class="h">Live Tracking</h2> 
+       </ion-card>
+      
+       </ion-col>
+
+            <ion-col col-md-4>
+              
+              <ion-card   class="fixed" (click)="loan()"  style="background-color:rgb(170, 194, 238)" >
+             
+              <img src="assets/loan (5).svg" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+             
+              <h1 style="margin-top: 15px" class="h" >Loan</h1> 
+                </ion-card>
+            </ion-col>
+          </ion-row>
+
+
+        </ion-grid>
+
+        <ion-grid>
+            <ion-row>
+           <ion-col col-md-1>
+           
+           <ion-card class="fixed" (click)="sacco()"  style="background-color:rgb(170, 194, 238)" >
+            <img src="assets/enterprise.svg" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+             
+            <h1  style="margin-top: 15px"class="h" >Sacco</h1> 
+           
+         </ion-card>
+         </ion-col>
+        
+              <ion-col col-md-1>
+              
+                <ion-card class="fixed" (click)="  Veh()"   style="background-color:rgb(170, 194, 238)" >
+                 
+                  <img src="assets/bus.svg" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+            
+                  <h1 style="margin-top: 15px" class="h">Vehicle management</h1> 
+                 
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    
+          <ion-grid>
+            <ion-row>
+           <ion-col col-md-2>
+           
+           <ion-card   class="fixed" (click)=" sch()"  style="background-color:rgb(170, 194, 238)  " >
+         
+            <img src="assets/mail.svg" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+            
+            <h1 style="margin-top: 15px" class="h" >Reminders</h1> 
+         </ion-card>
+         </ion-col>
+              <ion-col col-md-2>
+              
+                <ion-card class="fixed" (click)="  fin()"  style="background-color:rgb(170, 194, 238)"  >
+                  <img src="assets/report.svg" style="margin-top: 30px;height: 80px;width: 80px;align-self: center;justify-self: center">
+            
+                  <h1  style="margin-top: 15px"class="h" >Finance</h1> 
+                
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    
+        </div>
+<!-- Skeleton screen -->
+        <!-- <div *ngIf="!data">
+       
+          <ion-grid>
+            <ion-row>
+                <ion-col col-md-1>   <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+            
+                <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+                <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+            
+            </ion-col>
+
+            <ion-col col-md-1>
+                <ion-col col-md-1>   <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+            
+          </ion-col>
+            </ion-row>
+          </ion-grid>
+
+         
+         
+  
+
+        </div>
+ -->
+
+  </ion-content>
+  

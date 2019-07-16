@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title class="hi" >Schedules Linked</ion-title>
+     
+    <ion-buttons>
+        <ion-back-button
+        [text]="buttonText"
+        [icon]="buttonIcon"
+        (click)=back
+        >
+        
+    </ion-back-button>
+  </ion-buttons>
+     
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="spacer" style="height: 10px"></div> 
+    <div text-center >
+        <img alt="logo" height="40" src="assets/smarsys.png">
+    </div>
+  
+  
+    <div *ngIf="pointerVisible" padding text-center  >
+        <ion-row justify-content-center align-items-center style="height: 80%">
+        <p align="center"><img class="logo" src="assets/smart_smal.png"  /></p>
+        </ion-row>
+  
+        <div class="spacer" style="height: 2px"></div>   
+  
+        <p align="center" *ngFor="let names of ThisMessage">No vehicle linked to {{names}}  yet</p>
+        <ion-button color="qx3" style="height:25px;width: 20px">
+            <ion-icon ios="ios-add-circle" md="md-add-circle"  (click)="addnew()"></ion-icon>
+        </ion-button>
+  
+  
+    </div> 
+  
+  
+    <div *ngIf="pointerVisible2"  text-wrap  text-center>
+  
+        <ion-item text-center no-lines *ngFor="let names of ThisMessage">
+  
+            <ion-button color="success" style="height:25px">
+                {{names}} Schedules
+            </ion-button> <br>   
+             <div class="spacer" style="height: 7px"></div> 
+             <ion-button color="success" style="height:25px;width: 20px">
+                <ion-icon ios="ios-add-circle" md="md-add-circle" (click)="addnew()"></ion-icon>
+             </ion-button>
+        </ion-item>  
+  
+        <div class="spacer" style="height: 10px"></div> 
+  
+      <ion-list >
+         <ion-item-sliding  *ngFor="let item of items"  >
+              <ion-item>              
+                 <p>  <b>{{item.title}} </b>  {{item.note}} </p>
+              </ion-item>
+  
+              <ion-item-options side="end" (ionSwipe)="presentAlert(item)">
+                  <ion-button color="success"   (click)="presentAlert(item)">
+                      <ion-icon name="trash"></ion-icon>
+                     Delete
+                  </ion-button> 
+             </ion-item-options>     
+  
+             </ion-item-sliding>
+     </ion-list>             
+  
+  
+  </div>
+  
+  
+  
+  
+  </ion-content>
+  

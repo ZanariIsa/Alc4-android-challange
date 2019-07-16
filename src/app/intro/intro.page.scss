@@ -1,0 +1,114 @@
+.bg{
+    background: linear-gradient(to bottom, #00A399 0%, #fafafa 400%);
+  }
+  ion-card {
+    position: relative;
+    text-align: center;
+
+    
+  }
+
+ 
+
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+  .bt{
+    // width-50 style="
+    // text-align: right"
+    
+    width: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+ion-slide {
+  height: 100vh;
+  flex-direction: column;
+}
+
+ion-img {
+  max-width: 50vw;
+  max-height: 50vh;
+  overflow: hidden;
+}
+
+
+.step-one {
+  // background: var(--ion-color-primary);
+  // color: var(--ion-color-primary-contrast);
+  background: rgb(25,25,112);
+}
+// rgb(112,128,144)
+// rgb(0,128,128)
+.step-two {
+  background: rgb(25,25,112);
+ // background:rgb(72,61,139);
+  // background: var(--ion-color-success);
+  // color: var(--ion-color-success-contrast);
+}
+
+.step-three {
+  background: rgb(25,25,112);
+ // background:rgb(65,105,225);
+  // background: var(--ion-color-dark);
+  // color: var(--ion-color-dark-contrast);
+}
+// rgb(0,0,128)
+//rgb(102, 124, 103)
+.step-four {
+  background: rgb(25,25,112);
+ // background:rgb(47,79,79);
+  // background: var(--ion-color-dark);
+  // color: var(--ion-color-dark-contrast);
+}
+.h{
+  // text-align: center;
+  // margin-bottom: 5px;
+  // padding: 1px;
+  // font-size: 15px;
+  color:rgb(245, 243, 241);
+  // vertical-align: middle;
+  // align-content: center!important;
+}
+ion-slides {
+  --bullet-background: red;
+  --bullet-background-active: rebeccapurple;
+}
+ion-textarea{
+ height: 10px;
+}
+.backBtn{
+  position: absolute;
+  left: 20vw;
+  top: 40vh;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  border: none;
+  background: red;
+}
+
+.nextBtn{
+  position: absolute;
+  right: 20vw;
+  top: 40vh;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  border: none;
+  background: green;
+}

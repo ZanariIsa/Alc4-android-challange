@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>default</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button
+          [text]="buttonText"
+          [icon]="buttonIcon"
+         (click)="back"
+          >
+          
+      </ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid style="height: 100%">
+        
+    <ion-row justify-content-center align-items-center style="height: 20%">
+        <div *ngIf="pointerVisible" padding text-center style="color: white;" style="margin-top:20px"  >
+            WE are having trouble connecting. <br> Please try again later
+        </div> 
+     </ion-row>
+     
+    <ion-row justify-content-center align-items-center style="height: 80%">
+    <ion-img  (click)="back" style="width: 50px;background:black;height:50px"  src="assets/caption.png"></ion-img>
+    </ion-row>
+  </ion-grid>
+</ion-content> 

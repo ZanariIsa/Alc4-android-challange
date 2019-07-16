@@ -1,0 +1,82 @@
+<ion-header>
+    <ion-toolbar>
+          <ion-title class="hi"  >Fuel</ion-title>
+          <ion-buttons>
+          <ion-back-button
+          [text]="buttonText"
+          [icon]="buttonIcon"
+          (click)=back
+          >
+          
+      </ion-back-button>
+    </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <!-- <ion-list> -->
+           <div class="spacer" style="height: 5px"></div> 
+          <div class="spacer" style="height: 10px"></div>  
+         
+              <ion-button color="medium" expand="block"  >
+                  DAILY FUEL ENTRY  
+              </ion-button>
+         
+          <div class="spacer" style="height: 10px"></div> 
+  
+          <div text-center >
+  
+  
+                  <span style="font-size: 18px;border-style:none" (click)="openPicker()"  > {{initreg}} 
+                      </span>&nbsp;&nbsp;&nbsp;
+                      <ion-icon ios="ios-search" md="md-search" item-left  style="font-size: 30px;padding-right:30px" (click)="openPicker()"  ></ion-icon> 
+               
+  <!-- 
+              <ion-datetime display-format="DD-MM-YYYY" (click)="openPicker()"   ></ion-datetime>
+              <ion-spinner name="bubbles"> {{initreg}} </ion-spinner>
+              <ion-icon ios="ios-search" md="md-search" item-left ></ion-icon>  -->
+          </div>
+          <div class="spacer" style="height: 10px"></div> 
+                    
+          
+                  <ion-item>
+                          Entry Date: 
+                        
+                          <span style="font-size: 18px;border-style:ridge"  > {{initDate | date}} 
+                          </span>
+                          <ion-icon ios="ios-search" md="md-search" item-left  ></ion-icon> 
+                      
+                    
+                        </ion-item>
+                    
+  
+     
+  
+            <ion-item>
+                <ion-label color="primary" stacked>Fuel</ion-label>
+                <ion-input type="number" placeholder="Fuel in Ltrs" [(ngModel)]="usage.ltrs" ></ion-input>
+              </ion-item>
+    
+              <ion-item>
+                  <ion-label color="primary" stacked>Amount</ion-label>
+                  <ion-input type="number" placeholder="Amount" [(ngModel)]="usage.amo" ></ion-input>
+                </ion-item>
+  
+                <div class="spacer" style="height: 5px"></div> 
+  
+                <div text-wrap  text-center > 
+                    <ion-button color="success" (click)="proceed()"  >
+                        SAVE FUEL
+  
+                    </ion-button>
+  
+                    <ion-item no-lines *ngFor="let names of ThisMessage" style="text-align:center;color:red">
+                        {{names}} 
+                     </ion-item>
+  
+                </div>
+  
+  <!-- 
+      </ion-list> -->
+  </ion-content>
+  

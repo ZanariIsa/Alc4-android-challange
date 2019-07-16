@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-back-button end defaultHref="live-tracking"  ></ion-back-button>
+   
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-fab vertical="top" horizontal="start" slot="fixed">
+     
+        <ion-item no-lines style="background-color:#f6861f;border-radius: 5px" *ngFor="let names of ThisMessage">
+          {{names}} 
+        </ion-item>  
+     
+    </ion-fab>
+  
+    <ion-fab vertical="top" horizontal="end" slot="fixed"  >
+      <ion-fab-button>
+        <ion-icon name="arrow-dropright-circle" (click)="Playback()" ></ion-icon>
+      </ion-fab-button>
+   
+  </ion-fab>
+  
+  
+  <ion-fab vertical="top" horizontal="end" slot="fixed" (click)="Playback2()" style="margin-top:70px"  >
+    <ion-fab-button>
+      <ion-icon name="skip-forward"  ></ion-icon>
+    </ion-fab-button>
+  
+  </ion-fab>
+  
+  
+  
+  <ion-fab vertical="top" horizontal="end" slot="fixed" (click)="Playback3()" style="margin-top:130px" >
+    <ion-fab-button>
+      <ion-icon name="fastforward"  ></ion-icon>
+    </ion-fab-button>
+  
+  </ion-fab> 
+  <div #mapElement class="map" ></div>
+  </ion-content>
+  
+  

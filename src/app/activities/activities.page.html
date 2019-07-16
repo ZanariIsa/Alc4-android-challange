@@ -1,0 +1,80 @@
+<ion-header>
+    <ion-toolbar>
+       
+        <ion-buttons slot="start">
+            <ion-back-button
+                [text]="buttonText"
+                [icon]="buttonIcon"
+                defaultHref="dashboard"
+                >
+                
+            </ion-back-button>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+      <ion-list>     
+          <div text-center >
+  
+              <ion-button expand="block"style="height:25px">
+                  DAILY INCOME ENTRY 
+              
+              </ion-button>
+  
+             
+              
+          </div>
+  
+           <div class="spacer" style="height: 10px"></div> 
+  
+  <div text-center>
+  
+    
+      <span  (click)="openPicker()"  style="font-size: 18px;border-style:none"> {{initreg}} 
+        </span>
+        <ion-icon ios="ios-search" md="md-search" item-left   ></ion-icon> 
+  
+        <div class="spacer" style="height: 10px"></div> 
+  
+        <ion-item>
+            Entry Date: 
+            <ion-datetime display-format="DD-MM-YYYY "></ion-datetime>
+  
+            
+  
+    </ion-item>
+  
+  
+  </div>
+           
+          <ion-item>
+            <ion-label color="primary" stacked>Amount</ion-label>
+            <ion-input type="number" placeholder="Amount" [(ngModel)]="usage.amo" ></ion-input>
+          </ion-item> 
+            
+           <ion-item>
+              <ion-label color="primary" stacked>Description</ion-label>
+              <ion-input type="text"  placeholder="Describe the activity" [(ngModel)]="usage.des"></ion-input>
+          </ion-item>  
+  
+          <div class="spacer" style="height: 5px"></div> 
+  
+          <div text-wrap  text-center >     
+              <ion-button color="dark" (click)="proceed()"  >
+                  POST NEW INCOME
+  
+  
+              </ion-button>
+              
+  
+              <ion-item no-lines *ngFor="let names of ThisMessage" style="text-align:center;color:red">
+                  {{names}} 
+               </ion-item> 
+           </div>
+  
+                 
+    </ion-list>
+  
+  </ion-content>
+  

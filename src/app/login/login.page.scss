@@ -1,0 +1,24 @@
+// ion-content{
+//     --background: linear-gradient(197deg, rgb(25,25,112) 0%, snow 13.5%, rgb(146, 146, 199)  33.33%, rgba(0,0,0,1) 100%) !important;
+//   }
+  //--background: linear-gradient(197deg, rgb(25,25,112) 0%, snow 13.5%, rgba(29,29,29,1) 33.33%, rgba(0,0,0,1) 100%) !important;
+  :host {
+    ion-content {
+        --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+    }
+  }
+  
+  .paz {
+    position: relative;
+    z-index: 10;
+  }
+  
+  
+  .login-logo img {
+    max-width: 50px;
+  }
+  .login-logo {
+    padding: 10px 0;
+    min-height: 40px;
+  
+  }

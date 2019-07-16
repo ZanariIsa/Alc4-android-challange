@@ -1,0 +1,106 @@
+<ion-header>
+    <ion-toolbar>
+   
+      <ion-title class="hi" >View Expenses</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button
+            [text]="buttonText"
+            [icon]="buttonIcon"
+           (click)="back"
+            >
+            
+        </ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <div text-center >
+          <ion-button color="primary" expand="block" style="height:25px"  >
+            
+              EXPENSES VIEW
+          
+          </ion-button>
+        </div>
+  
+        <div text-center *ngIf="pointerSearch" style="border-style:outset;margin-left: 5px;margin-right: 5px ">
+            REPORT FILTER 
+         <div class="spacer" style="height: 10px"></div> 
+         <div text-center > 
+            <span style="font-size: 18px;border-style:none"> {{initreg}} 
+              </span>&nbsp;
+              <ion-icon ios="ios-search" md="md-search" item-left   ></ion-icon> 
+          </div>
+          <div class="spacer" style="height: 10px"></div> 
+  
+          <div  text-wrap  text-center>
+              Start Date:   <ion-datetime display-format="DD-MM-YYYY "> {{initDate | date}}  
+  
+              <span style="font-size: 18px;border-style:outset"> 
+                </span>&nbsp;
+                <ion-icon ios="ios-search" md="md-search" item-left  ></ion-icon> 
+              </ion-datetime>
+                <div class="spacer" style="height: 15px"></div> 
+  
+                End Date: 
+                <ion-datetime display-format="DD-MM-YYYY " [(value)]="initreg" > {{initDateL | date}} 
+                <span style="font-size: 18px;border-style:outset"> 
+                  </span>&nbsp;
+                  <ion-icon ios="ios-search" md="md-search" item-right  ></ion-icon> 
+  
+                </ion-datetime>
+  
+  
+            </div>
+  
+            <div class="spacer" style="height:10px"></div> 
+  
+            <ion-icon *ngIf="pointerclosesearch" ios="ios-close-circle" md="md-close-circle" (click)="edit2()" 
+            style="font-size: 30px">
+          </ion-icon>
+  
+        <ion-icon ios="ios-checkbox" md="md-checkbox" (click)="proceed()" style="font-size: 30px;margin-left: 40px"></ion-icon> 
+  
+         
+  
+        </div>
+  
+  
+        <ion-list *ngIf="pointerlist">   
+            <div text-wrap text-center style="border-style: outset;margin-left:10px;margin-right:20px;" >   
+                <ion-item no-lines *ngFor="let item of filters" style="text-align:center;">
+                    <h2>   EXPENSES : &nbsp; {{item.vehicles}}</h2> {{item.dates}}  <br> Ksh. {{item.Amo}}   
+                      <ion-icon (click)="edit()" *ngIf="pointersearchBtn"
+                         style="font-size: 25px;float: right;margin-right: 10px;" ios="ios-search" md="md-search">
+                     </ion-icon>                                                      
+                  </ion-item>  
+                </div>
+  
+                <div class="spacer" style="height:10px"></div> 
+  
+                <div text-wrap text-center style="border-style:none"> 
+                    <ion-list >
+                        <ion-button *ngFor="let item of items" (click)="itemTapped($event, item)">
+  
+                            <div class="item item-thumbnail-left" style="border-top-style: outset;border-left-style: outset">
+                                <ion-button color="secondary" slot="end">
+                                    <img src = {{item.path}} style="height:10px">
+                                    {{item.title}}
+                                   <ion-badge  style="background-color:rgba(168, 60, 60, 0.897); float: right;margin-top: 5px"> Ksh. {{item.bal}} /= </ion-badge>                        
+  
+                                </ion-button>
+                                <p> {{item.income}} </p> 
+                                <p> {{item.expenses}}  </p> 
+                              </div>
+                        </ion-button>
+  
+  
+  
+          </ion-list>
+        </div>   
+      </ion-list>
+  
+  
+      
+  </ion-content>
+  
